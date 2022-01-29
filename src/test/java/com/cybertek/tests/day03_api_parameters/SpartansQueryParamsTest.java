@@ -46,8 +46,8 @@ public class SpartansQueryParamsTest {
         assertEquals("application/json", response.contentType());
 
         System.out.println(response.asString());
-        assertTrue(response.asString().contains("Female"));
-        assertTrue(response.asString().contains("Janette"));
+       assertTrue(response.asString().contains("Female"));
+       assertTrue(response.asString().contains("Janette"));
     }
 
 }
