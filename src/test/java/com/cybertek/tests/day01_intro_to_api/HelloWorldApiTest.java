@@ -15,12 +15,10 @@ public class HelloWorldApiTest {
 
         //print response status code
         System.out.println(response.statusCode());
-        Assertions.assertEquals(200,response.statusCode());
+        Assertions.assertEquals(200, response.statusCode());
         //print response body
         response.prettyPrint();
 
     }
-
-
 
 }
