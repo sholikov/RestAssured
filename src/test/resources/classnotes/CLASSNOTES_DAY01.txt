@@ -12,7 +12,7 @@ Database: SQL > JDBC + Java
 API: REST Api : Test manually -> Postman
 			  : Automation -> Java + RestAssured library
 
-In job market, there are many automatioin jobs with
+In job market, there are many automation jobs with
 	-> Just Selenium UI
 	-> UI + SQL database
 	-> API testing automation
