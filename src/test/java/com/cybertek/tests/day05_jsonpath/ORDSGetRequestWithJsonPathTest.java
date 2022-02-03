@@ -63,4 +63,37 @@ public class ORDSGetRequestWithJsonPathTest extends ORDSTestBase {
 
 
     }
+
+    @DisplayName("GET ords/hr/employees and using jsonPath filters")
+    @Test
+    public void jsonPathFilterTest(){
+        Response response = given().accept(ContentType.JSON).and().queryParam("limit",200).when().get("/employees");
+        System.out.println("response.statusCode() = " + response.statusCode());
+
+       // response.prettyPrint();
+        JsonPath json = response.jsonPath();
+        // employees that work in department 90
+        List<String> empList = json.getList("items.findAll{it.department_id==90}.first_name");
+        System.out.println("empList = " + empList);
+        System.out.println("empList.size() = " + empList.size());
+
+        // names of employees who are "IT-PROG"
+        List<String> itProgrammers = json.getList("items.findAll {it.job_id==\"IT_PROG\"}.first_name");
+        System.out.println("maleEmployees = " + itProgrammers);
+
+        //emp ids of Employees whose salary is more than 5000
+        List<String> empIds = json.getList("items.findAll{it.salary>=5000}.employee_id");
+        System.out.println("empIds = " + empIds);
+        System.out.println("empIds.size() = " + empIds.size());
+
+        // find the person firstName with max salary
+        String fistNameMaxSalary = json.getString("items.max{it.salary}.first_name");
+        System.out.println("fistNameMaxSalary = " + fistNameMaxSalary);
+
+        // find the person firstName with max salary
+        String fistNameMinSalary = json.getString("items.min{it.salary}.first_name");
+        System.out.println("fistNameMaxSalary = " + fistNameMinSalary);
+
+
+    }
 }

@@ -148,7 +148,7 @@ READING JSON RESPONSE BODY.
 
 So far, we just printed the json response body and did some assertions using contains String method.
 
-But it is not the most effiecient way. There are better ways to work with json response and validate them.
+But it is not the most efficient way. There are better ways to work with json response and validate them.
 
 Lets take below json as an example
 {

@@ -37,7 +37,7 @@ Real world example:
 
 Another example:
 	When we try to register for Etsy, we have several options:
-		-> we can fillout the form and register directly with Etsy UI website
+		-> we can fill out the form and register directly with Etsy UI website
 		OR
 		-> We can use Google, Facebook, Apple accounts to register:
 			-> Lets say we use google account:
@@ -48,12 +48,12 @@ Another example:
 
  2 main types of usages of API:
 
- #1) Sharing information between seperate applications.
+ #1) Sharing information between separate applications.
  Turkish airlines API sharing flight info with Expedia.
 
  Google API is sharing info with Etsy
 
- One application will send request to another applications's API, then API will send response will requested information.
+ One application will send request to another application's API, then API will send response will requested information.
 
  REQUEST  ----> API
  RESPONSE <---- API
@@ -184,7 +184,7 @@ We verify/assert that status code and json body is as expected.
 
 AUTOMATION:
 
-	Your Java Code with RestAssured: is Client thats is sending REQUEST.
+	Your Java Code with RestAssured: is Client that's is sending REQUEST.
 
 	And API will send back the response.
 
@@ -296,7 +296,7 @@ public void getAllUsersApiTest() {
 response.prettyPrint(); => print response body into console
 
 response.body().asString()
-response.asString() => returns reponse body as String object. And we can use string methods on it.
+response.asString() => returns response body as String object. And we can use string methods on it.
 Like contains, toUpperCase etc
 
 Assert that response contains "java"
