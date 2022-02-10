@@ -6,14 +6,12 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class Country {
-    @JsonProperty("country_id")
-    private String countryId;
-
-    @JsonProperty("country_name")
-    private String countryName;
+public class Region {
     @JsonProperty("region_id")
     private int regionId;
 
-     private List<Link> links;
+    @JsonProperty("region_name")
+    private String regionName;
+
+    private List<Link> links;
 }
